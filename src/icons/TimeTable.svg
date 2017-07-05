@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2986 7358 45 45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: white;
+    </style>
+  </defs>
+  <g id="Group_638" data-name="Group 638" transform="translate(-3466 6882)">
+    <path id="ic_grid_on_24px" class="cls-1" d="M42.5,2H6.5A4.513,4.513,0,0,0,2,6.5v36A4.513,4.513,0,0,0,6.5,47h36A4.513,4.513,0,0,0,47,42.5V6.5A4.513,4.513,0,0,0,42.5,2Zm-27,40.5h-9v-9h9Zm0-13.5h-9V20h9Zm0-13.5h-9v-9h9ZM29,42.5H20v-9h9ZM29,29H20V20h9Zm0-13.5H20v-9h9Zm13.5,27h-9v-9h9Zm0-13.5h-9V20h9Zm0-13.5h-9v-9h9Z" transform="translate(478 474)"/>
+  </g>
+</svg>
