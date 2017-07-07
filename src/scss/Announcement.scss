@@ -1,0 +1,45 @@
+@import "variables.scss";
+
+.announcement-title {
+  padding: $separation-padding;
+  border-bottom: $border-main-style;
+}
+.announcement-bar{
+  padding:$separation-padding;
+  border-bottom: $border-main-style;
+  background-color: $primary-color;
+  cursor:pointer;
+  &:hover{
+    background-color: lighten($secondary-color, 30);
+  }
+
+  & > *{
+    vertical-align: middle;
+  }
+  & .circle{
+    height:10px;
+    width:10px;
+  }
+  & .bell {
+    display: inline-block;
+    height: 1.5em;
+    width: 1.5em;
+    margin:0 10px 0 10px;
+  }
+  div{
+    display:inline-block;
+  }
+
+}
+.show-more{
+  float:right;
+  margin-right: 5px;
+  & > *{
+    vertical-align:middle;
+  }
+  & img{
+    height:1em;
+    width:1em;
+    margin-left:5px;
+  }
+}

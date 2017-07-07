@@ -1,108 +1,53 @@
-
-$primary-color:white;
-$secondary-color:#1A538B;
-$NavBar-height: 70px;
-.DropDown {
-  width: 50px;
-  height: 5px;
+@import "./variables.scss";
+.drop-down-line {
+  width: 40px;
+  height: 4px;
   background-color: $primary-color;
-  margin: 10px 20px;
+  margin: 10px 10px;
 }
-.NavBar {
+.nav {
+  display: flex;
+  flex-direction: column;
+
+}
+.nav-bar {
   font-size: 1.2em;
   width:100%;
-  height:$NavBar-height;
+  height:$navBar-height;
   background-color: $secondary-color;
   border-top: 2px solid transparent;
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid lighten($secondary-color,10);
+  flex:1;
   display:flex;
   justify-content: space-between;
-  font-family: "Microsoft YaHei UI";
+  font-family: $main-font;
   align-items: center;
 
-
 }
 
-.DropDownMenu{
-  margin:10px 0px;
-  & img {
-    height: 1em;
-    width: 1em;
-    color: $primary-color;
-  }
-  & ul{
-    list-style-type:none;
-    padding:0;
-    margin:0;
-  }
+.drop-down-icon{
+  margin:10px 10px;
+  cursor: pointer;
 }
-.BrandName{
+.brand-name{
   margin: 5px;
   color: $primary-color;
 }
-.School-logo{
+.school-logo{
   margin:5px 10px;
   height: 2.5em;
   width: 2.5em;
-  fill:black;
-
-}
-/*DropDown Items*/
-.DropDownMenu {
-  &:hover {
-    background-color: lighten($secondary-color, 10);
-  }
-  &:focus{
-    background-color: lighten($secondary-color, 20);
-  }
-  &:focus  > .Nav-Content {
-    max-height: 50%;
-    width: 100%;
-    -webkit-transition: max-height 1s ease-in;
-    -moz-transition: max-height 1s ease-in;
-    transition: max-height 1s ease-in;
-  }
 }
 
-.Nav-Content{
-  position:absolute;
-  top:70px;
-  overflow:hidden;
-  background-color: $secondary-color;
-  width:0;
-  max-height:0;
-}
 
-.Nav-Sub{
-  padding:20px;
-  & ul{
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-  }
 
-  & li{
-    display:flex;
-    flex:1;
-  }
-  & a{
-    flex:1;
-    display:flex;
-    justify-content:center;
-    color: $primary-color;
-    text-decoration: none;
-    padding:5px 0;
-    text-align: center;
-  }
-  & img{
-    margin-right:4em;
-  }
 
-  & a:hover{
-    text-decoration:underline;
-    background-color:lighten($secondary-color, 30);
-  }
-}
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,31 @@
+@import "./variables.scss";
+.course-figure{
+  display:inline-block;
+  width:50%;
+  padding: $separation-padding;
+  & figure {
+
+    border:$border-main-style;
+    width:100%;
+  }
+  & span {
+    display:inline-block;
+    width:50%;
+    text-align: center;
+    padding-top: $separation-padding;
+    border-top: $border-main-style;
+  }
+  & div{
+    font-size: 0.8em;
+    font-weight: lighter;
+    text-align: center;
+    padding: $separation-padding 0;
+  }
+  & img {
+    height: 100px;
+    width: 100%;
+    background: $secondary-color;
+    text-indent: -9999px;
+
+  }
+}

@@ -1,0 +1,50 @@
+@import "./variables.scss";
+.nav-sub{
+
+  overflow:hidden;
+  background-color: $secondary-color;
+  font-family:$main-font;
+  font-size: 1em;
+  width: 100%;
+}
+
+.nav-sub{
+  & img {
+    height: 1.2em;
+    width: 1.2em;
+    color: $primary-color;
+  }
+  & ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  & li {
+    display: flex;
+    flex: 1;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  & a {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    color: $primary-color;
+    text-decoration: none;
+    padding: 5px 0;
+
+  }
+  & img {
+    margin-right: 1em;
+  }
+
+  & a:hover {
+    text-decoration: underline;
+    background-color: lighten($secondary-color, 30);
+  }
+
+}
