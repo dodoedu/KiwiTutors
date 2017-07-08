@@ -1,8 +1,6 @@
-import React,{ Component } from 'react';
-import PropTypes from 'react';
+import React from 'react';
 
-
-import {NavLink,BrowserRouter, Route, Redirect,Switch} from 'react-router-dom' ;
+import {NavLink} from 'react-router-dom' ;
 
 import '../scss/Courses.css';
 
@@ -13,6 +11,7 @@ class Courses extends React.Component {
 
         let courses = this.props.data.map((course) => {
             return (
+
                 <div className="course-figure" key={course.id}>
                     <NavLink to={`/courses/${course.id}`} >
                         <figure>
@@ -25,13 +24,7 @@ class Courses extends React.Component {
                         </figure>
                     </NavLink>
                 </div>
-            );
-        });
 
-        let Routes= this.props.data.map((course)=>{
-            return(
-
-                <Route path = {`/courses/${course.id}`} render ={()=> <h1>Hello World</h1> } />
             );
         });
 
@@ -39,7 +32,6 @@ class Courses extends React.Component {
 
             <div>
                 <div>{courses}</div>
-                <div>{Routes}</div>
 
             </div>
 

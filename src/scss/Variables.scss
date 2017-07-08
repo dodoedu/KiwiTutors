@@ -1,6 +1,12 @@
 $primary-color:white;
 $secondary-color:#1A538B;
+$hover-color: lighten($secondary-color, 30);
+$active-color: lighten($secondary-color, 15);
+$second-border-style-color: lighten($secondary-color, 30);
+
+
 $navBar-height: 50px;
 $main-font:"Microsoft YaHei UI";
 $border-main-style: thin silver solid;
+$border-second-style: 0.5px $second-border-style-color solid;
 $separation-padding: 5px;

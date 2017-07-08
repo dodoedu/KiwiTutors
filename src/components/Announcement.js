@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React from 'react';
 import "../scss/Announcement.css";
 import Bell from "../icons/Bell.svg";
 import ShowMore from "../icons/ShowMore.svg";
@@ -22,14 +22,14 @@ class Announcement extends React.Component{
         return (
             <div>
 
-                <div className="announcement-title">最新公告</div>
+                <div className="announcement-title">所有公告</div>
                 <div className ="announcement-bar" onClick={this.onAnnouncementClick}>
                     <img className="circle" src={circle} alt="circle"/>
                     <img className="bell" src={Bell} alt="bell"/>
                     <div>总消息 : 50</div>
                     <div className="show-more">
                         <span>{this.state.spanText}</span>
-                        <img src ={ShowMore}/>
+                        <img src ={ShowMore} alt="icon"/>
                     </div>
                 </div>
                 <div>

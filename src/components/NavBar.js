@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+
 import '../scss/NavBar.css';
 import Announcement from '../icons/Announcement.svg';
 import NavContents from '../components/NavContents';
@@ -28,7 +28,7 @@ class NavBar extends React.Component {
                             </div>
                         </div>
                         <div className="brand-name"> 作作学习管理系统</div>
-                        <div className="school-logo"><img src={Announcement}/></div>
+                        <div className="school-logo"><img src={Announcement} alt="announcement"/></div>
                     </div>
                     {this.state.menuState ==="close" ? null: <div onClick={this.onMenuClick}> <NavContents/> </div>}
                 </div>

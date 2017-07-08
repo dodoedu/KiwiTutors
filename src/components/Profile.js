@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../scss/Profile.css';
 
 const Profile=(props)=>{
@@ -7,7 +7,7 @@ const Profile=(props)=>{
             <div className="accounts-wrapper" key={account.id}>
                 <div className="profile-photo">
                     <div>头像</div>
-                    <img src={account.img_src}/>
+                    <img src={account.img_src} alt={account.name}/>
                 </div>
                 <div className="profile-items">
                     <div>姓名</div>
