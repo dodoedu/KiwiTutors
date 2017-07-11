@@ -1,0 +1,12 @@
+
+import schoolLogo from '../icons/images/schoolLogo.svg'
+const schoolData =[
+    {
+        school_name:"哈尔滨环雅",
+        school_city:"哈尔滨",
+        school_province: "黑龙江",
+        school_logo_src: "../icons/images/schoolLogo.svg"
+    }
+];
+
+export default schoolData;

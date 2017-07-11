@@ -7,6 +7,7 @@ import '../scss/Courses.css';
 
 class Courses extends React.Component {
 
+
     render() {
 
         let courses = this.props.data.map((course) => {

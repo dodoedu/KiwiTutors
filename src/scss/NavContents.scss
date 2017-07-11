@@ -21,9 +21,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width:100%;
   }
 
   & li {
+    cursor:pointer;
     display: flex;
     flex: 1;
     font-size: 1.2em;
@@ -42,9 +44,29 @@
     margin-right: 1em;
   }
 
-  & a:hover {
-    text-decoration: underline;
-    background-color: lighten($secondary-color, 30);
+  & li:hover {
+    background-color: lighten($secondary-color, 20);
   }
+
+}
+@media (min-width: 768px) {
+  .nav-sub{
+    overflow:hidden;
+    background-color: $secondary-color;
+    font-family:$main-font;
+    font-size: 0.8em;
+    width: 100%;
+
+
+    & li {
+      padding: 10px 0;
+      width:100%
+    }
+    & img {
+      margin-right: 0.5em;
+    }
+  }
+
+
 
 }

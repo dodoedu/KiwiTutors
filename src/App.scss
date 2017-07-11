@@ -7,3 +7,9 @@ body{
   margin:0;
   font: 1em "Microsoft YaHei UI", sans-serif;
 }
+@media (min-width: 768px){
+  .wrapper{
+    display: flex;
+
+  }
+}

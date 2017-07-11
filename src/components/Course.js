@@ -20,9 +20,9 @@ class Course extends React.Component{
         let announcementMessage= courses.map( (props) => {
             return(
                 <div key = {props.id}>
-                    {courseId === props.id ?
-                        <div>
-                            {props.announcement.map((props)=>{
+                    {courseId === props.id
+                        ?
+                        <div>{props.announcement.map((props)=>{
                                 return(
                                 <div className="announcement-message-bar" key={props.announcement_id}>
                                     <span>{props.announcement_title}</span>

@@ -15,9 +15,8 @@ class App extends Component {
     return (
         <BrowserRouter>
           <div className="wrapper">
-             <div className="nav-wrapper">
                  <NavBar />
-              </div>
+
               <Switch>
                   <Route exact path = "/" render ={()=> <Redirect to = "/courses" /> } />
                   <Route exact path = "/courses" render ={( {match} )=> <Courses data = {coursesData} /> } />
@@ -25,7 +24,6 @@ class App extends Component {
                   <Route path = "/Announcement" render ={()=> <Announcement data ={coursesData}/>} />
                   <Route path = "/Profile" render ={()=> <Profile data ={accountsData}/>} />
                   <Route path = "/courses/:courseId" render={({match})=><Course data={coursesData} match={match} />}/>
-
 
               </Switch>
           </div>

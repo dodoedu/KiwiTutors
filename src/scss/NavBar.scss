@@ -1,13 +1,17 @@
 @import "./variables.scss";
 .drop-down-line {
-  width: 40px;
-  height: 4px;
+  width: 24px;
+  height: 2px;
   background-color: $primary-color;
-  margin: 10px 10px;
+  margin: 5px 5px;
 }
-.nav {
-  display: flex;
-  flex-direction: column;
+.nav-contents{
+display: none;
+
+}
+.nav-wrapper{
+  width:100%;
+  margin:0;
 
 }
 .nav-bar {
@@ -17,28 +21,86 @@
   background-color: $secondary-color;
   border-top: 2px solid transparent;
   border-bottom: 2px solid lighten($secondary-color,10);
-  flex:1;
   display:flex;
   justify-content: space-between;
   font-family: $main-font;
   align-items: center;
-
 }
 
-.drop-down-icon{
-  margin:10px 10px;
+.drop-down-icon {
+  margin: 10px 10px;
   cursor: pointer;
+
+  &:hover .drop-down-line {
+    background-color: $tertiary-color;
+  }
+
+  &:active .drop-down-line{
+    background-color: $tertiary-color;
+  }
 }
 .brand-name{
-  margin: 5px;
+  margin: 5px 0 5px 30px;
   color: $primary-color;
 }
 .school-logo{
-  margin:5px 10px;
-  height: 2.5em;
-  width: 2.5em;
+  margin:0 10px;
+  padding:0;
+  height: 60px;
+& img{
+  height:60px;
+  width: 60px;
 }
+}
+@media (min-width: 768px) {
 
+
+  .nav-wrapper{
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    flex:1;
+  }
+
+  .nav-bar{
+
+    height: 100vh;
+    flex:1;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .drop-down-line{
+    display:none;
+  }
+  .brand-name{
+    margin:5px 0;
+
+    font-size: 1.1em;
+    order:-2;
+    text-align:center;
+  }
+  .nav-contents{
+    margin:10px 0;
+    order:-1;
+    display:inline-block;
+
+  }
+  .school-logo{
+    order:-3;
+    margin:0;
+    padding:0;
+    height: 100px;
+    & img{
+      height:80px;
+      width: 80px;
+    }
+}
+  .mobile-phone-menu{
+    display:none;
+  }
+}
 
 
 
