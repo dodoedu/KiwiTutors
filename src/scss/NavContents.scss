@@ -63,10 +63,29 @@
       width:100%
     }
     & img {
-      margin-right: 0.5em;
+      margin-right: 0.15em;
     }
   }
 
+}
 
+
+@media (min-width:1281px) {
+  .nav-sub{
+    overflow:hidden;
+    background-color: $secondary-color;
+    font-family:$main-font;
+    font-size: 1em;
+    width: 100%;
+
+
+    & li {
+      padding: 10px 0;
+      width:100%
+    }
+    & img {
+      margin-right: 1em;
+    }
+  }
 
 }

@@ -56,16 +56,15 @@ display: none;
 
 
   .nav-wrapper{
-    display: flex;
-    flex-direction:column;
-    justify-content: flex-start;
-    flex:1;
+    display: inline-block;
+    float:left;
+    width:80px;
+    height:100vh;
   }
 
   .nav-bar{
-
-    height: 100vh;
-    flex:1;
+    height: 100%;
+    width:100%;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -84,6 +83,7 @@ display: none;
   .nav-contents{
     margin:10px 0;
     order:-1;
+    width:100%;
     display:inline-block;
 
   }
@@ -100,10 +100,25 @@ display: none;
   .mobile-phone-menu{
     display:none;
   }
+
 }
 
 
-
+@media (min-width:1281px){
+  .nav-wrapper{
+    display: inline-block;
+    float:left;
+    width: 120px;
+    height:100vh;
+  }
+  .school-logo {
+    height: 120px;
+    & img {
+      height: 120px;
+      width: 120px;
+    }
+  }
+}
 
 
 

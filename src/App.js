@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
         <BrowserRouter>
-          <div className="wrapper">
+          <div className="wrapper clear-fix">
                  <NavBar />
 
               <Switch>

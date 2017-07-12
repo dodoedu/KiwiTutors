@@ -9,7 +9,12 @@ body{
 }
 @media (min-width: 768px){
   .wrapper{
-    display: flex;
+    display: block;
 
+  }
+  .clear-fix:after{
+    content:"";
+    display:table;
+    clear:both;
   }
 }

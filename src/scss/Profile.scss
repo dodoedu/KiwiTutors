@@ -71,10 +71,10 @@
     & img{
       display:inline-block;
 
-      height:100px;
-      width: 100px;
+      height:150px;
+      width: 150px;
       padding: 5px;
-      margin: 10px 10%;
+      margin: 5px 5%;
       border: $border-main-style;
       border-radius: 4px;
     }
@@ -87,8 +87,8 @@
       display:inline-block;
       height:100px;
 
-      margin-left:5%;
-      margin-top:10px;
+      margin-left:2%;
+      margin-top:50px;
 
     }
     & label, button{
@@ -112,19 +112,71 @@
 
   }
 @media (min-width: 768px) {
-  .profile-wrapper{
-    margin-top:70px;
-    width:100%;
+  .profile-wrapper {
+    float: right;
+    margin-top: 70px;
+    width: calc(100% - 88px);
 
   }
-  .accounts-text{
-    margin:10px;
-    padding-top:10px;
+  .accounts-text {
+    margin: 10px;
+    padding-top: 10px;
     border-top: $border-main-style;
     font-size: 1.4em;
   }
-  .profile-photo{
+  .profile-photo {
     border-top: $border-main-style;
+
+  }
+  .upload-photos{
+    & img{
+      display:inline-block;
+      margin: 5px 0 5px 20%;
+      height:300px;
+      width: 300px;
+      padding: 5px;
+      border: $border-main-style;
+      border-radius: 4px;
+    }
+    & form{
+      position: absolute;
+      display:inline-block;
+      height:100px;
+      margin-left:10%;
+      margin-top:100px;
+
+    }
+    .upload-photos-description{
+      padding: 5px;
+      margin:5px 0 0 20%;
+      width:300px;
+      text-align: center;
+    }
+  }
+
+
+}
+@media (min-width:1281px) {
+  .profile-wrapper {
+    float:left;
+    margin-top: 70px;
+    width: calc(100% - 30%);
+
+  }
+  .upload-photos{
+    & form{
+      margin-left:5%;
+      font-size:1.2em;
+      & label{
+      }
+    }
+    & img {
+      display: inline-block;
+      margin: 5px 0 5px 30%;
+    }
+    .upload-photos-description{
+      margin:5px 0 0 30%;
+    }
   }
 
 }
