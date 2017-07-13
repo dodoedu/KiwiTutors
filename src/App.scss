@@ -1,3 +1,4 @@
+@import './scss/Variables.scss';
 *{
    box-sizing: border-box;
   padding:0;
@@ -6,6 +7,7 @@
 body{
   margin:0;
   font: 1em "Microsoft YaHei UI", sans-serif;
+  color: $default-text-color;
 }
 @media (min-width: 768px){
   .wrapper{

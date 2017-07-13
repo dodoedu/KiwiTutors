@@ -1,8 +1,5 @@
 @import './Variables.scss';
 
-.accounts-wrapper{
-
-}
 .accounts-text{
   font-size: 1.2em;
   margin-left:10px;
@@ -115,13 +112,13 @@
   .profile-wrapper {
     float: right;
     margin-top: 70px;
-    width: calc(100% - 88px);
+    border-top: $border-main-style;
+    width: $tablet-width;
 
   }
   .accounts-text {
     margin: 10px;
     padding-top: 10px;
-    border-top: $border-main-style;
     font-size: 1.4em;
   }
   .profile-photo {
@@ -160,7 +157,7 @@
   .profile-wrapper {
     float:left;
     margin-top: 70px;
-    width: calc(100% - 30%);
+    width: $desktop-width;
 
   }
   .upload-photos{

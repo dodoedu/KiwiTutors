@@ -7,9 +7,11 @@ import Courses from './components/Courses';
 import Profile from './components/Profile';
 import Announcement from './components/Announcement';
 import Course from './components/Course';
+import AnnouncementDetail from './components/AnnouncementDetail';
 /*import data*/
 import coursesData from './data/coursesData';
 import accountsData from './data/accountsData';
+import announcementData from './data/annoucncementData';
 class App extends Component {
   render() {
     return (
@@ -21,10 +23,14 @@ class App extends Component {
                   <Route exact path = "/" render ={()=> <Redirect to = "/courses" /> } />
                   <Route exact path = "/courses" render ={( {match} )=> <Courses data = {coursesData} /> } />
 
-                  <Route path = "/Announcement" render ={()=> <Announcement data ={coursesData}/>} />
+                  <Route path = "/Announcement"
+                         render ={({match})=>
+                             <Announcement data ={announcementData} match={match}/>} />
                   <Route path = "/Profile" render ={()=> <Profile data ={accountsData}/>} />
-                  <Route path = "/courses/:courseId" render={({match})=><Course data={coursesData} match={match} />}/>
-
+                  <Route exact path = "/courses/:courseId" render={({match})=><Course data={coursesData} match={match} />}/>
+                  <Route path = "/courses/:courseId/announcement/:announcementId"
+                         render={({match})=><AnnouncementDetail match={match} />}
+                  />
               </Switch>
           </div>
         </BrowserRouter>

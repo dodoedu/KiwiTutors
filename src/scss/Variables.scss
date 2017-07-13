@@ -1,8 +1,9 @@
 $primary-color:white;
-  $secondary-color:#1A538B;
+$secondary-color:#1A538B;
+$default-text-color: black;
 $tertiary-color: darkGrey;
-$hover-color: lighten($secondary-color, 30);
-$active-color: lighten($secondary-color, 15);
+$hover-color: lighten($secondary-color, 20);
+$active-color: lighten($secondary-color, 30);
 
 $second-border-style-color: lighten($secondary-color, 30);
 
@@ -12,3 +13,7 @@ $main-font:"Microsoft YaHei UI";
 $border-main-style: thin silver solid;
 $border-second-style: 0.5px $second-border-style-color solid;
 $separation-padding: 5px;
+
+
+$tablet-width: calc(100% - 88px);
+$desktop-width: calc(100% - 30%);
