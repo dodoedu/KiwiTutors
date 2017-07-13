@@ -110,11 +110,7 @@
   }
 @media (min-width: 768px) {
   .profile-wrapper {
-    float: right;
-    margin-top: 70px;
-    border-top: $border-main-style;
-    width: $tablet-width;
-
+    @include main-contents-tablet-layout();
   }
   .accounts-text {
     margin: 10px;
@@ -155,9 +151,7 @@
 }
 @media (min-width:1281px) {
   .profile-wrapper {
-    float:left;
-    margin-top: 70px;
-    width: $desktop-width;
+    @include main-contents-desktop-layout();
 
   }
   .upload-photos{

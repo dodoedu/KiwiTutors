@@ -92,10 +92,7 @@
 }
 @media(min-width: 768px){
   .announcement-wrapper{
-    border-top: $border-main-style;
-    float:left;
-    width:$tablet-width;
-    margin-top: 70px;
+    @include main-contents-tablet-layout();
   }
   .announcement-title{
     font-size:1.4em;
@@ -104,6 +101,6 @@
 }
 @media(min-width: 1281px){
   .announcement-wrapper{
-    width: $desktop-width;
+    @include main-contents-desktop-layout();
   }
 }

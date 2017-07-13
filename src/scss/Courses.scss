@@ -4,9 +4,9 @@
   width:50%;
   padding: $separation-padding;
   & figure {
-
     border:$border-main-style;
     width:100%;
+
   }
   & span {
     display:inline-block;
@@ -16,16 +16,68 @@
     border-top: $border-main-style;
   }
   & div{
+    color: grey;
     font-size: 0.8em;
     font-weight: lighter;
     text-align: center;
     padding: $separation-padding 0;
   }
   & img {
-    height: 100px;
+    height: 125px;
     width: 100%;
-    background: $secondary-color;
+    background: darkgray;
     text-indent: -9999px;
 
+  }
+  & a {
+    text-decoration: none;
+    color: $default-text-color;
+  }
+  & a:hover span , & a:hover figcaption{
+    text-decoration: underline;
+  }
+}
+@media(min-width:768px){
+  .courses-wrapper {
+    @include main-contents-tablet-layout();
+
+  }
+  .course-figure {
+    display: inline-block;
+    width: 150px;
+    padding: $separation-padding;
+    margin: 0 20px 30px 10px ;
+    & figure {
+      border: $border-main-style;
+      width: 150px;
+
+    }
+    & span {
+      display: inline-block;
+      width: 50%;
+      text-align: center;
+      padding-top: $separation-padding;
+      border-top: $border-main-style;
+    }
+    & div {
+      color: grey;
+      font-size: 0.8em;
+      font-weight: lighter;
+      text-align: center;
+      padding: $separation-padding 0;
+    }
+    & img {
+      height: 125px;
+      width: 100%;
+      background: darkgray;
+      text-indent: -9999px;
+
+    }
+
+  }
+}
+@media(min-width:1281px){
+  .courses-wrapper{
+    @include main-contents-desktop-layout();
   }
 }

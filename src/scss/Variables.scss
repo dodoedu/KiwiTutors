@@ -17,3 +17,19 @@ $separation-padding: 5px;
 
 $tablet-width: calc(100% - 88px);
 $desktop-width: calc(100% - 30%);
+
+
+
+@mixin main-contents-tablet-layout{
+  float: right;
+  border-top: $border-main-style;
+  width: $tablet-width;
+  margin-top: 70px;
+  max-height: 100vh;
+}
+@mixin  main-contents-desktop-layout{
+  float:left;
+  margin-top: 70px;
+  margin-left: 5px;
+  width: $desktop-width;
+}

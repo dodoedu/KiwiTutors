@@ -107,17 +107,17 @@ display: none;
   .nav-wrapper{
     display: inline-block;
     float:left;
-    width: 120px;
+    width: 100px;
     height:100vh;
   }
   .brand-name{
-    font-size:1.2em;
+    font-size:1em;
   }
   .school-logo {
     height: 120px;
     & img {
-      height: 120px;
-      width: 120px;
+      height: 100px;
+      width: 100px;
     }
   }
 }

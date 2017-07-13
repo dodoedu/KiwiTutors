@@ -30,12 +30,7 @@ class Courses extends React.Component {
         });
 
         return (
-
-            <div>
-                <div>{courses}</div>
-
-            </div>
-
+                <div className="courses-wrapper">{courses}</div>
         );
     };
 }
