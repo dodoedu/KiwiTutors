@@ -77,6 +77,6 @@
 }
 @media(min-width: 1281px) {
   .announcement-details-page{
-    width: $desktop-width;
+   @include main-contents-desktop-layout;
   }
 }

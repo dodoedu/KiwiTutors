@@ -13,6 +13,7 @@ body{
   .wrapper{
     display: block;
     height:100%;
+    overflow:auto;
   }
   .clear-fix:after{
     content:"";

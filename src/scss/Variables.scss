@@ -1,9 +1,9 @@
 $primary-color:white;
 $secondary-color:#1A538B;
 $default-text-color: black;
-$tertiary-color: darkGrey;
+$tertiary-color: #EAEAEA;
 $hover-color: lighten($secondary-color, 20);
-$active-color: lighten($secondary-color, 30);
+$active-color: lighten($secondary-color, 5);
 
 $second-border-style-color: lighten($secondary-color, 30);
 
@@ -16,7 +16,7 @@ $separation-padding: 5px;
 
 
 $tablet-width: calc(100% - 88px);
-$desktop-width: calc(100% - 30%);
+$desktop-width: calc(100% - 10%);
 
 
 
@@ -32,4 +32,21 @@ $desktop-width: calc(100% - 30%);
   margin-top: 70px;
   margin-left: 5px;
   width: $desktop-width;
+  max-width: 1500px;
+}
+@mixin mobile-title{
+  font-size: 1.2em;
+  padding-left:10px;
+  padding-top:15px;
+  padding-bottom:10px;
+
+}
+@mixin a-tag-generic-style{
+  text-align: center;
+  text-decoration: none;
+  color: $default-text-color;
+  &:hover{
+    color:white;
+    background-color: $hover-color;
+  }
 }

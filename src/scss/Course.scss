@@ -1,46 +1,61 @@
 @import "./Variables.scss";
 
-.course-nav-bar{
-  width:100%;
-  border-bottom: $border-second-style;
 
-  span{
-    padding: $separation-padding;
-    background-color: $primary-color;
-    display:inline-block;
-    border-right:$border-second-style;
-    width:25%;
-    text-align: center;
-    cursor:pointer;
-    &:hover{
-      background-color: $hover-color;
+.course-main{
+  .title{
+    @include mobile-title;
+
+
+    & span{
+      margin-right:20px;
     }
-    &:active{
+  }
+  .course-nav-bar{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    border-top: $border-main-style;
+    border-bottom: $border-main-style;
+
+    & a {
+      @include a-tag-generic-style;
+      display: inline-block;
+      background-color: $tertiary-color;
+      border-radius:5px;
+      text-align: center;
+
+      padding: 5px 15px;
+      margin: 2px 3%;
+    }
+    .active{
+      color:$primary-color;
       background-color: $active-color;
     }
   }
 }
-.announcement-message-bar{
-  display:flex;
-  justify-content: space-between;
-  padding:$separation-padding;
-  border-bottom: $border-main-style;
-  background-color: $primary-color;
-  cursor:pointer;
-  &:hover{
-    background-color: lighten($secondary-color, 30);
-  }
 
-  & > *{
-    vertical-align: middle;
-  }
+@media(min-width: 768px) {
+  .course-main {
+    @include main-contents-tablet-layout;
 
-  span{
-    display:inline-block;
+    .title {
+      display: inline-block;
+    }
+    .course-nav-bar {
+      display: inline-block;
+      width: 500px;
+      border: none;
+      & a {
+        padding: 5px 30px;
+      }
+    }
   }
-  .announcement-date{
-    margin-left:auto;
-    margin-right:5px;
-  }
-
 }
+
+@media(min-width: 1281px){
+  .course-main {
+    @include main-contents-desktop-layout;
+  }
+}
+
+

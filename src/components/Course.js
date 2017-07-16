@@ -1,53 +1,43 @@
 import React from 'react';
-
+import {NavLink,Route, Redirect,Switch} from 'react-router-dom';
 import "../scss/Course.css";
+
+import CourseAnnouncement from '../components/CourseAnnouncement';
 
 class Course extends React.Component{
     state ={
-        expandAnnounceState:false
-    };
-    onAnnouncementClick =(e)=>{
-        let newExpandAnounceState = this.state.expandAnnounceState ? false : true;
+      titleText :''
 
-        this.setState({expandAnnounceState:newExpandAnounceState})
     };
+
 
 
 
     render() {
         let courseId= this.props.match.params.courseId;
-        let courses = this.props.data;
-        let announcementMessage= courses.map( (props) => {
-            return(
-                <div key = {props.id}>
-                    {courseId === props.id
-                        ?
-                        <div>{props.announcement.map((props)=>{
-                                return(
-                                <div className="announcement-message-bar" key={props.announcement_id}>
-                                    <span>{props.announcement_title}</span>
-                                    <span className="announcement-date">{props.announcement_date}</span>
-                                    <span>{props.announcement_time}</span>
-                                </div>
-                                )
-                            }
-                            )}
-                        </div>
-                        :
-                        null}
-                </div>
-            );
+        let courseName = '';
+
+        this.props.data.map((course)=> {
+        return(
+
+            course.id === courseId ? (courseName += course.name): null
+        )
         });
 
         return (
-            <div>
-                <div className="course-nav-bar">
-                    <span onClick={this.onAnnouncementClick}>公告</span>
-                    <span>PPT</span>
-                    <span>作业</span>
-                    <span>线上测试</span>
+            <div className="course-main">
+                <div className="title">
+                    <span>{courseName}</span>
+                    <span>{courseId}</span>
                 </div>
-                {this.state.expandAnnounceState? <div>{announcementMessage}</div> : null}
+                <div className="course-nav-bar">
+                    <NavLink to={`${this.props.match.url}/announcement`} >公告</NavLink>
+                    <NavLink to ={`${this.props.match.url}/PPT`}>课件</NavLink>
+                    <NavLink to={`${this.props.match.url}/homework`}>作业</NavLink>
+                    <NavLink to ={`${this.props.match.url}/OnlineTests`}>线上测试</NavLink>
+                </div>
+
+                <Route path = "/courses/:courseId/announcement" render = {({match})=><CourseAnnouncement match ={match}/>} />
             </div>
         )
 

@@ -1,0 +1,32 @@
+@import 'Variables.scss';
+.course-announcement{
+
+  & a {
+    @include a-tag-generic-style;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0 10px 20px;
+    border-bottom: $border-main-style;
+
+    .bar-title {
+      margin-left: 5px;
+    }
+    .bar-person {
+
+      margin-left: auto;
+      width: 50px;
+    }
+    .bar-date {
+      margin-right:5px;
+    }
+  }
+
+}
+
+@media(min-width: 768px) {
+  .course-announcement{
+    border-top:$border-main-style;
+  }
+
+}

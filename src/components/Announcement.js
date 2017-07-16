@@ -39,7 +39,7 @@ class Announcement extends React.Component{
                     <img className="style-holder" alt="circle"/>
                     }
                     <span>{announcement.announcement_title}</span>
-                    <span className="announcement-time">{announcement.announcement_time}</span>
+                    <span className="announcement-course-id">{announcement.course_id}</span>
                     <span className="announcement-date">{announcement.announcement_date}</span>
                 </div>
                 </NavLink>
