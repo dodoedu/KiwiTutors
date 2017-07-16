@@ -19,7 +19,15 @@ $tablet-width: calc(100% - 88px);
 $desktop-width: calc(100% - 10%);
 
 
+@mixin sub-heading-style{
+  padding:10px 0 10px 20px;
+  border-bottom: $border-main-style;
+  cursor:pointer;
+  &:hover{
+    background-color: $hover-color;
+  }
 
+}
 @mixin main-contents-tablet-layout{
   float: right;
   border-top: $border-main-style;

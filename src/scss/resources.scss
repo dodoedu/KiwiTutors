@@ -1,0 +1,15 @@
+@import 'Variables.scss';
+
+.resources {
+  .show-more {
+    & img {
+      height: 1em;
+      width: 1em;
+      margin-left: 5px;
+      margin-right: 10px;
+    }
+  }
+  .sub-heading {
+    @include sub-heading-style;
+  }
+}

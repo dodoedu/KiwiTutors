@@ -3,7 +3,8 @@ import {NavLink,Route, Redirect,Switch} from 'react-router-dom';
 import "../scss/Course.css";
 
 import CourseAnnouncement from '../components/CourseAnnouncement';
-
+import Resouces from '../components/Resources';
+import Resources from "./Resources";
 class Course extends React.Component{
     state ={
       titleText :''
@@ -32,12 +33,14 @@ class Course extends React.Component{
                 </div>
                 <div className="course-nav-bar">
                     <NavLink to={`${this.props.match.url}/announcement`} >公告</NavLink>
-                    <NavLink to ={`${this.props.match.url}/PPT`}>课件</NavLink>
+                    <NavLink to ={`${this.props.match.url}/resources`}>课件</NavLink>
                     <NavLink to={`${this.props.match.url}/homework`}>作业</NavLink>
                     <NavLink to ={`${this.props.match.url}/OnlineTests`}>线上测试</NavLink>
                 </div>
 
                 <Route path = "/courses/:courseId/announcement" render = {({match})=><CourseAnnouncement match ={match}/>} />
+                <Route path = "/courses/:courseId/resources" render = {({match})=><Resources match ={match}/>} />
+
             </div>
         )
 
